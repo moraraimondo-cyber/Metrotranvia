@@ -2,7 +2,7 @@
 
 Sitio web inspirado en el Metrotranvía Mendoza.
 
-## 📍 Secciones
+## Secciones
 
 - Inicio
 - Recorrido
@@ -10,19 +10,12 @@ Sitio web inspirado en el Metrotranvía Mendoza.
 - Contacto
 - Accesibilidad
 
-## 🖥️ Tecnologías utilizadas
+## Diseño
 
-- HTML
-- CSS
-- Google Fonts
-
-## 🎨 Diseño
-
-- Estética moderna
 - Tipografía Inter
 - Diseño responsive
 - Paleta terracota y tonos oscuros
 
-## 👩‍💻 Desarrollado por
+## Desarrollado por
 
 Mora Raimondo
