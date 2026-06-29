@@ -15,6 +15,7 @@
     --dark: #1a0505;
     --white: #f8f5f2;
     --soft: #d9c5bb;
+    --accent-blue: #1D4ED8;
 }
 
 body{
@@ -22,6 +23,14 @@ body{
     background: linear-gradient(180deg, var(--bg), var(--bg2));
     color: var(--white);
     line-height: 1.6;
+}
+
+/* FRANJA SUPERIOR */
+
+.top-bar{
+    width: 100%;
+    height: 4px;
+    background-color: var(--accent-blue);
 }
 
 /* HEADER */
@@ -39,10 +48,37 @@ header{
     z-index: 1000;
 }
 
-.logo{
+.tim-btn{
+    display: flex;
+    align-items: center;
+    gap: 8px;
     text-decoration: none;
     color: var(--white);
-    font-size: 2rem;
+    font-weight: 800;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    background-color: rgba(255,255,255,0.08);
+    padding: 8px 18px;
+    border-radius: 50px;
+    border: 1px solid rgba(255,255,255,0.12);
+    transition: 0.3s;
+}
+
+.tim-btn span{
+    font-weight: 500;
+    font-size: 0.78rem;
+    color: var(--soft);
+}
+
+.tim-btn:hover{
+    background-color: var(--accent-blue);
+    transform: translateY(-2px);
+}
+
+.page-title{
+    text-decoration: none;
+    color: var(--white);
+    font-size: 1.6rem;
     font-weight: 800;
     letter-spacing: 1px;
 }
@@ -61,13 +97,40 @@ nav a{
 }
 
 nav a:hover{
-    color: var(--terracotta-light);
+    color: var(--accent-blue);
+}
+
+/* BARRA DE TITULO */
+
+.title-bar{
+    width: 100%;
+    padding: 50px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.title-bar-content span{
+    color: var(--accent-blue);
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.title-bar-content h1{
+    font-size: 2.6rem;
+    line-height: 1.15;
+    margin-top: 12px;
+    font-weight: 800;
+    color: var(--white);
 }
 
 /* HERO */
 
 .hero{
-    min-height: 100vh;
+    min-height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -101,22 +164,7 @@ nav a:hover{
     position: relative;
     z-index: 2;
     text-align: center;
-}
-
-.hero span{
-    color: var(--terracotta-light);
-    font-weight: 700;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-}
-
-.hero h1{
-    font-size: 5rem;
-    line-height: 1;
-    margin: 20px 0;
-    font-weight: 800;
-    color: var(--white);
+    margin: auto;
 }
 
 .hero p{
@@ -143,22 +191,22 @@ nav a:hover{
 }
 
 .btn-primary{
-    background-color: var(--terracotta);
+    background-color: var(--accent-blue);
     color: white;
 }
 
 .btn-primary:hover{
-    background-color: var(--terracotta-light);
+    background-color: #2952e0;
     transform: translateY(-3px);
 }
 
 .btn-secondary{
-    border: 2px solid var(--terracotta-light);
+    border: 2px solid var(--accent-blue);
     color: white;
 }
 
 .btn-secondary:hover{
-    background-color: var(--terracotta-light);
+    background-color: var(--accent-blue);
 }
 
 /* STATS */
@@ -235,6 +283,10 @@ nav a:hover{
     margin-bottom: 15px;
 }
 
+.card.stop-card{
+    border-top: 3px solid var(--accent-blue);
+}
+
 .card p{
     color: var(--soft);
 }
@@ -262,7 +314,7 @@ nav a:hover{
 
 .timeline-item{
     padding: 25px;
-    border-left: 4px solid var(--terracotta-light);
+    border-left: 4px solid var(--accent-blue);
     background-color: rgba(255,255,255,0.04);
     border-radius: 0 20px 20px 0;
 }
@@ -270,6 +322,10 @@ nav a:hover{
 .timeline-item h3{
     color: white;
     margin-bottom: 10px;
+}
+
+.airport-timeline .timeline-item{
+    border-left: 4px solid var(--accent-blue);
 }
 
 /* FOOTER */
@@ -303,8 +359,12 @@ iframe{
         gap: 10px;
     }
 
-    .hero h1{
-        font-size: 3rem;
+    .title-bar{
+        padding: 40px 6%;
+    }
+
+    .title-bar-content h1{
+        font-size: 2rem;
     }
 
     .section-title{
@@ -384,7 +444,63 @@ iframe{
 .line{
     width: 120px;
     height: 5px;
-    background-color: var(--terracotta-light);
+    background-color: var(--accent-blue);
     border-radius: 20px;
     margin-bottom: 30px;
+}
+
+.line-accent{
+    width: 120px;
+    height: 5px;
+    background-color: var(--accent-blue);
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+
+/* TABLA DE FRECUENCIAS */
+
+.freq-table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 25px;
+}
+
+.freq-table th,
+.freq-table td{
+    padding: 16px 20px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.freq-table th{
+    color: var(--accent-blue);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid var(--accent-blue);
+}
+
+.freq-table td{
+    color: var(--soft);
+}
+
+.freq-table tr:last-child td{
+    border-bottom: none;
+}
+
+.freq-table tbody tr:hover td{
+    color: var(--white);
+}
+
+@media(max-width: 768px){
+
+    .freq-table{
+        font-size: 0.9rem;
+    }
+
+    .freq-table th,
+    .freq-table td{
+        padding: 12px 10px;
+    }
 }
